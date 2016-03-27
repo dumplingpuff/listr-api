@@ -1,0 +1,21 @@
+{{!-- blogposts template --}}
+
+
+
+
+{{blogpost-form}}
+
+
+{{#each model.blogposts as |blogpost|}}
+  {{blogpost-snippet post=blogpost
+                     routeUpdateBlog='updateBlog'
+                     routeDestroyBlog='destroyBlog'}}
+{{/each}}
+
+{{!-- {{blogpost-details blogpost=model.blogposts}} --}}
+
+{{!-- {{each model.comments as |eachComment|}}
+  {{comment-details comment=eachComment}}
+{{/each}}
+
+{{comment-form}} --}}
